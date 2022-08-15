@@ -7,10 +7,8 @@ import javax.validation.constraints.Size;
 
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
+
+
 public class UserModel {
     @NotNull(message="User name field cannot be empty!")
     @Size(min=1, max=32, message="Your user name must be between 1 and 32 characters long!")
@@ -46,8 +44,108 @@ public class UserModel {
     private String userZip;
 
 
+    public UserModel() {
 
+    }
+    public UserModel(String userName, String userPassword, String userFirstName, String userLastName, String userEmail, String userPhoneNumber, String userAddress1, String userAddress2, String userCity, String userState, String userZip) {
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.userEmail = userEmail;
+        this.userPhoneNumber = userPhoneNumber;
+        this.userAddress1 = userAddress1;
+        this.userAddress2 = userAddress2;
+        this.userCity = userCity;
+        this.userState = userState;
+        this.userZip = userZip;
+    }
 
+    public String getUserName() {
+        return userName;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
+    public String getUserFirstName() {
+        return userFirstName;
+    }
+
+    public void setUserFirstName(String userFirstName) {
+        this.userFirstName = userFirstName;
+    }
+
+    public String getUserLastName() {
+        return userLastName;
+    }
+
+    public void setUserLastName(String userLastName) {
+        this.userLastName = userLastName;
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
+    public String getUserPhoneNumber() {
+        return userPhoneNumber;
+    }
+
+    public void setUserPhoneNumber(String userPhoneNumber) {
+        this.userPhoneNumber = userPhoneNumber;
+    }
+
+    public String getUserAddress1() {
+        return userAddress1;
+    }
+
+    public void setUserAddress1(String userAddress1) {
+        this.userAddress1 = userAddress1;
+    }
+
+    public String getUserAddress2() {
+        return userAddress2;
+    }
+
+    public void setUserAddress2(String userAddress2) {
+        this.userAddress2 = userAddress2;
+    }
+
+    public String getUserCity() {
+        return userCity;
+    }
+
+    public void setUserCity(String userCity) {
+        this.userCity = userCity;
+    }
+
+    public String getUserState() {
+        return userState;
+    }
+
+    public void setUserState(String userState) {
+        this.userState = userState;
+    }
+
+    public String getUserZip() {
+        return userZip;
+    }
+
+    public void setUserZip(String userZip) {
+        this.userZip = userZip;
+    }
 }

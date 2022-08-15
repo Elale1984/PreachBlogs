@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class BlogPost {
 
 
@@ -31,7 +30,19 @@ public class BlogPost {
 
 
 
-    public int getId() {
+    public BlogPost() {
+    }
+    public BlogPost(int id, String title, String contentPreview, String fullContent, String author, String date) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.contentPreview = contentPreview;
+		this.fullContent = fullContent;
+		this.author = author;
+		this.date = date;
+	}
+
+	public int getId() {
         return id;
     }
 

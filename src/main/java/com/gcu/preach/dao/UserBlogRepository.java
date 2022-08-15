@@ -2,6 +2,7 @@ package com.gcu.preach.dao;
 
 
 import com.gcu.preach.entity.BlogPost;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 

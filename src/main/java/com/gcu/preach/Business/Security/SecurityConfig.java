@@ -32,6 +32,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable()
+			.httpBasic()
+				.and()
+				.authorizeRequests()
+				.antMatchers("/services/**")
+				.authenticated()
+				.and()
 			.authorizeRequests()
 				.antMatchers("/index/", "/register/", "/images/**", "/css/**" ).permitAll()
 				.anyRequest().authenticated()
@@ -50,15 +56,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.permitAll()
 				.logoutSuccessUrl("/login/");
 	}
-	
+
 	@Autowired
 	public void configure(AuthenticationManagerBuilder auth) throws Exception{
 		auth
-			.userDetailsService(service)
-			.passwordEncoder(passwordEncoder);
-
-
-
+				.userDetailsService(service)
+				.passwordEncoder(passwordEncoder);
 	}
-	
 }

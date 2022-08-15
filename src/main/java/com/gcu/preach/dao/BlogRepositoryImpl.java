@@ -111,10 +111,10 @@ public class BlogRepositoryImpl implements BlogRepository, UserBlogRepository {
     @Override
     public List<BlogPost> getAllUserBlogPosts(String username) {
 
-            return jdbcTemplate.query(GET_ALL_USER_BLOG_POSTS_QUERY, (rs, rowNum) -> new BlogPost(
-                    rs.getInt("id"), rs.getString("title"),
-                    rs.getString("contentPreview"), rs.getString("fullContent"),
-                    rs.getString("author"), rs.getString("date")), username);
+        return jdbcTemplate.query(GET_ALL_USER_BLOG_POSTS_QUERY, (rs, rowNum) -> new BlogPost(
+                rs.getInt("id"), rs.getString("title"),
+                rs.getString("contentPreview"), rs.getString("fullContent"),
+                rs.getString("author"), rs.getString("date")), username);
 
 
     }
@@ -129,4 +129,3 @@ public class BlogRepositoryImpl implements BlogRepository, UserBlogRepository {
         }
     }
 }
-

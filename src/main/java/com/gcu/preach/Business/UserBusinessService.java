@@ -34,7 +34,7 @@ public class UserBusinessService implements UserBusinessServiceInterface, UserDe
 
     public boolean registerUser(UserModel userModel) {
         userRepository.create(userModel);
-            return true;
+        return true;
     }
 
     public UserModel getUserByUsername(String username) {
@@ -60,4 +60,3 @@ public class UserBusinessService implements UserBusinessServiceInterface, UserDe
 
     }
 }
-
