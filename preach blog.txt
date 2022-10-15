@@ -1,0 +1,42 @@
+Here is the individual tables. The schema is to be named ---> preachblog
+
+
+
+CREATE TABLE `blogpost` (
+  `id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `contentPreview` text NOT NULL,
+  `fullContent` longtext NOT NULL,
+  `author` varchar(30) DEFAULT NULL,
+  `date` varchar(29) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+
+CREATE TABLE `userblogpost` (
+  `id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `contentPreview` text NOT NULL,
+  `fullContent` longtext NOT NULL,
+  `author` varchar(30) DEFAULT NULL,
+  `date` varchar(29) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+
+CREATE TABLE `usermodel` (
+  `userName` varchar(32) NOT NULL,
+  `userPassword` varchar(100) NOT NULL,
+  `userFirstName` varchar(20) NOT NULL,
+  `userLastName` varchar(20) NOT NULL,
+  `userEmail` varchar(50) NOT NULL,
+  `userPhoneNumber` varchar(50) NOT NULL,
+  `userAddress1` varchar(60) NOT NULL,
+  `userAddress2` varchar(60) DEFAULT NULL,
+  `userCity` varchar(32) NOT NULL,
+  `userState` varchar(14) NOT NULL,
+  `userZip` varchar(5) NOT NULL,
+  PRIMARY KEY (`userName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
