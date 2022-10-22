@@ -9,9 +9,9 @@ CREATE TABLE `blogpost` (
   `fullContent` longtext NOT NULL,
   `author` varchar(30) DEFAULT NULL,
   `date` varchar(29) DEFAULT NULL,
+  `likes` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
-
 
 
 CREATE TABLE `userblogpost` (
@@ -21,6 +21,7 @@ CREATE TABLE `userblogpost` (
   `fullContent` longtext NOT NULL,
   `author` varchar(30) DEFAULT NULL,
   `date` varchar(29) DEFAULT NULL,
+  `likes` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
