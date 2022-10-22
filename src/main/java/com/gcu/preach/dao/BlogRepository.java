@@ -13,4 +13,6 @@ public interface BlogRepository {
     List<BlogPost> getAllBlogPosts();
 
     int GetNextBlogPostId();
+
+
 }

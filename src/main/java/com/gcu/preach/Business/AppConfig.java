@@ -8,14 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
-
-
-
     @Bean(name = "blogPostsBusinessService")
     BlogPostsBusinessService getBlogPostService() {
         return new BlogPostsBusinessService();
     }
-
 
 }
 

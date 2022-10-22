@@ -7,10 +7,12 @@ import javax.validation.constraints.Size;
 
 
 @Data
-@NoArgsConstructor
+
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+
 public class UserModel {
     @NotNull(message="User name field cannot be empty!")
     @Size(min=1, max=32, message="Your user name must be between 1 and 32 characters long!")
@@ -44,10 +46,5 @@ public class UserModel {
     @NotNull(message="User name field cannot be empty!")
     @Size(min=5, max=5, message="Your zipcode must be between 5 characters long!")
     private String userZip;
-
-
-
-
-
 
 }
