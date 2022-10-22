@@ -14,4 +14,8 @@ public interface UserBlogRepository {
 
 
     int GetNextUserBlogPostId();
+
+
+
+
 }

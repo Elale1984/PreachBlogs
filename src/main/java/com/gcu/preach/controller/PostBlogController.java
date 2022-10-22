@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -26,11 +27,14 @@ public class PostBlogController {
 
     @GetMapping("/")
     public String display(Model model) {
-        String date = Calendar.getInstance().getTime().toString().formatted("%d/%m/%Y");
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        String strDate = formatter.format(date);
         BlogPost blogPost = new BlogPost();
         blogPost.setId(blogPostsBusinessService.getNextBlogId());
-        blogPost.setDate(date);
+        blogPost.setDate(strDate);
         blogPost.setAuthor(userName);
+        blogPost.setLikes(0);
         // Display post blog form view
         model.addAttribute("headerText", "Preach It!!");
         model.addAttribute("blogPost", blogPost);

@@ -46,3 +46,27 @@ body {
 #loginPrompt {
     color: darkorange;
 }
+
+/*Like bar */
+.like-bar {
+
+    float: right;
+}
+
+.like-bar__container {
+    display: flex;
+    margin: 15px;
+    background-color: whitesmoke;
+    border: #2e2e2e 3px solid;
+
+}
+.like-bar__number {
+
+    padding: 7px 15px 0 2px;
+    font-size: 22px;
+
+}
+
+.like-bar__like-button {
+    padding: 9px 1px 0 0;
+}

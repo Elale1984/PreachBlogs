@@ -59,6 +59,9 @@ public static List<BlogPost> blogPosts = new ArrayList<>();
         return service.GetNextBlogPostId();
     }
 
+
+
+
     // User Blog Posts
     @Override
     public void createUserBlogPosts(BlogPost blogPost) {
@@ -92,6 +95,8 @@ public static List<BlogPost> blogPosts = new ArrayList<>();
     public int getNextUserBlogId() {
         return userService.GetNextUserBlogPostId();
     }
+
+
 
 
 }

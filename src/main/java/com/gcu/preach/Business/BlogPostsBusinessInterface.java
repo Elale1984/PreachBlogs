@@ -13,10 +13,13 @@ public interface BlogPostsBusinessInterface {
     void addBlogPost(BlogPost blogPost);
     int getNextBlogId();
 
+
     void createUserBlogPosts(BlogPost blogPost);
     void updateUserBlogPosts(BlogPost blogPost);
     void deleteUserBlogPosts(int id);
     List<BlogPost> getAllUserBlogPosts();
     void addUserBlogPost(BlogPost blogPost);
     int getNextUserBlogId();
+
+
 }

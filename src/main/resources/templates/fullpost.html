@@ -12,30 +12,49 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class=" col-xl-7 ">
-                    <!-- Post preview-->
-                    <table>
-                        <tr>
-                            <td>
-                                <h2 class="post-title" th:text="${blogPost.getTitle}">Man must explore, and this is exploration at its greatest</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="post-meta">
-                                    Posted by
-                                    <span class="post-author" th:text="${blogPost.getAuthor}"> Author </span>
-                                    on <span th:text="${blogPost.getDate}">September 24, 2022</span>
-                                </p>
-                                <hr class="my-4" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p  class="post-full-content-text" th:text="${blogPost.getFullContent}">Problems look mighty small from 150 miles up</p>
-                            </td>
-                        </tr>
+                    <form action="#" th:action="@{doLikePost}" th:object="${blogPost}" method="post">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h2 class="post-title" th:text="${blogPost.getTitle}">Man must explore, and this is exploration at its greatest</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="post-meta">
+                                        Posted by
+                                        <span class="post-author" th:text="${blogPost.getAuthor}"> Author </span>
+                                        on <span th:text="${blogPost.getDate}">September 24, 2022</span>
+                                    </p>
+                                    <hr class="my-4" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p  class="post-full-content-text" th:text="${blogPost.getFullContent}">Problems look mighty small from 150 miles up</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="like-bar">
+                                        <div class="like-bar__container">
+                                            <div class="like-bar__number">
+                                                <p class="like-count"  th:text="${likes}" ></p>
+                                            </div>
+                                            <div class="like-bar__like-button">
+                                                <button class="btn btn-primary" type="submit">Preach</button>
+<!--                                                <input type="submit" class="like-button" th:src="@{/img/ic_like.png}" alt="like post icon"/>-->
 
-                    </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </form>
+                    <!-- Post preview-->
+
                 </div>
             </div>
         </div>
